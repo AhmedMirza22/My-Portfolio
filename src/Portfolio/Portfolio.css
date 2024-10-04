@@ -3,13 +3,14 @@
   text-align: center;
 }
 
+/* Apply gradient color to "My Recent Projects" title */
 .projects-section h2 {
   font-size: 36px;
   margin-bottom: 40px;
   font-weight: bold;
-  background: linear-gradient(to right, #8268d8, #331455);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #6b47dc;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .projects-container {
@@ -34,14 +35,15 @@
   padding: 20px; /* Add some padding for spacing */
 }
 
+/* On hover: change background and set text color to white */
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to right, #8268d8, #331455);
   color: white;
-
 }
 
+/* Project images layout */
 .project-images {
   display: flex;
   justify-content: center; /* Center the images horizontally */
@@ -58,21 +60,24 @@
   text-align: center; /* Center the text inside the card */
 }
 
+/* Gradient text initially for the project title */
 .project-details h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  background: linear-gradient(to right, #8268d8, #331455);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black; /* Black initially, no background gradient on hover */
+  transition: color 0.4s ease;
 }
 
+/* Description */
 .project-details p {
   font-size: 14px;
   color: #555;
   margin-bottom: 20px;
+  transition: color 0.4s ease;
 }
 
+/* Link styles */
 .project-link {
   font-size: 14px;
   font-weight: bold;
@@ -82,8 +87,10 @@
   text-decoration: none;
   border-radius: 6px;
   display: inline-block;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Move arrow on hover */
 .project-link span {
   margin-left: 5px;
   transition: margin-left 0.3s ease;
@@ -92,6 +99,8 @@
 .project-link:hover span {
   margin-left: 10px;
 }
+
+/* Fix: Project title and description turn white on hover */
 .project-card:hover h3, .project-card:hover p {
-  color: white;
+  color: white; /* Set text color to white on hover */
 }

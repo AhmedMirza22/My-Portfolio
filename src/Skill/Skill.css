@@ -90,3 +90,16 @@
 .skill-card:hover .wp-icon {
   color: #21759b; /* WordPress blue */
 }
+
+/* NEW: Firebase, GitHub, GitLab Icons */
+.skill-card:hover .firebase-icon {
+  color: #FFCA28; /* Firebase yellow */
+}
+
+.skill-card:hover .github-icon {
+  color: #333; /* GitHub's black */
+}
+
+.skill-card:hover .gitlab-icon {
+  color: #FCA121; /* GitLab's orange */
+}
