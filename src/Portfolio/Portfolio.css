@@ -37,6 +37,9 @@
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #8268d8, #331455);
+  color: white;
+
 }
 
 .project-images {
@@ -88,4 +91,7 @@
 
 .project-link:hover span {
   margin-left: 10px;
+}
+.project-card:hover h3, .project-card:hover p {
+  color: white;
 }

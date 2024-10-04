@@ -1,6 +1,6 @@
 .footer {
     padding: 30px 20px;
-    background-color: #6b47dc;
+    background: linear-gradient(to right, #6b47dc, #331455); /* Gradient background */
     color: white;
     text-align: center;
   }
@@ -8,6 +8,8 @@
   .footer-content p {
     font-size: 16px;
     margin-bottom: 20px;
+    color: white;
+
   }
   
   .social-icons {

@@ -21,7 +21,7 @@ import EquiTripImage3 from '../assets/EquiTripImage3.webp';
 
 const Portfolio = () => {
   return (
-    <section id="projects" className="projects-section">
+    <section id="portfolio" className="projects-section">
       <h2>My Recent Projects</h2>
 
       <div className="projects-container">

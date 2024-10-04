@@ -1,13 +1,21 @@
+/* Header styles */
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: white;
+  background: linear-gradient(to right, #6b47dc, #331455); /* Gradient background */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Smooth transition */
 }
 
+.header.scrolled {
+  background: rgba(107, 71, 220, 0.9); /* Slightly transparent on scroll */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,14 +24,22 @@
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  color: #6b47dc;
+  color: white; /* Changed color to match gradient */
+  letter-spacing: 1px;
+  transition: transform 0.4s ease-in-out; /* Smooth animation */
 }
 
+.logo:hover {
+  transform: rotate(-5deg) scale(1.1); /* Rotate and scale effect on hover */
+}
+
+/* Nav Links */
 .nav-links {
   list-style-type: none;
   display: flex;
+  align-items: center;
 }
 
 .nav-links li {
@@ -32,7 +48,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: white; /* Change to white for better contrast */
   font-size: 16px;
   position: relative;
   padding-bottom: 5px;
@@ -46,28 +62,53 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #6b47dc;
+  background-color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #6b47dc;
+  color: #ffcc00; /* Change color on hover */
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
 
+/* Hire Button */
 .hire-btn {
   padding: 10px 20px;
-  background-color: #6b47dc;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient button */
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.4s ease, transform 0.4s ease; /* Smooth transition */
 }
 
 .hire-btn:hover {
-  background-color: #5532b5;
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+}
+
+/* Smooth scroll effect for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation when the header scrolls */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animation on page load */
+.header {
+  animation: fadeInDown 1s ease-in-out;
 }
