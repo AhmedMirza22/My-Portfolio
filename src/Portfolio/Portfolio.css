@@ -3,16 +3,15 @@
   text-align: center;
 }
 
-/* Apply gradient color to "My Recent Projects" title */
+/* Title of the section */
 .projects-section h2 {
   font-size: 36px;
   margin-bottom: 40px;
   font-weight: bold;
-  color: #6b47dc;
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  color: #6b47dc; /* Solid purple color for the title */
 }
 
+/* Container to hold project cards */
 .projects-container {
   display: flex;
   justify-content: space-around;
@@ -20,22 +19,23 @@
   gap: 20px;
 }
 
+/* Each project card */
 .project-card {
   width: 30%;
   background-color: #f8f5ff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* Ensures the card content stacks vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  padding: 20px; /* Add some padding for spacing */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* On hover: change background and set text color to white */
+/* On hover: change background color and text color to white */
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -46,33 +46,34 @@
 /* Project images layout */
 .project-images {
   display: flex;
-  justify-content: center; /* Center the images horizontally */
+  justify-content: center;
   gap: 10px;
-  margin-bottom: 20px; /* Add margin below images */
+  margin-bottom: 20px;
 }
 
 .project-images img {
-  width: 100px; /* Image width */
+  width: 100px;
   border-radius: 8px;
 }
 
+/* Project details */
 .project-details {
-  text-align: center; /* Center the text inside the card */
+  text-align: center;
 }
 
-/* Gradient text initially for the project title */
+/* Initially the project title is black */
 .project-details h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: black; /* Black initially, no background gradient on hover */
+  color: black;
   transition: color 0.4s ease;
 }
 
-/* Description */
+/* Project description */
 .project-details p {
   font-size: 14px;
-  color: #555;
+  color: #555; /* Initial text color */
   margin-bottom: 20px;
   transition: color 0.4s ease;
 }
@@ -100,7 +101,50 @@
   margin-left: 10px;
 }
 
-/* Fix: Project title and description turn white on hover */
+/* On hover: change project title and description to white */
 .project-card:hover h3, .project-card:hover p {
-  color: white; /* Set text color to white on hover */
+  color: white;
+}
+
+/* -------------------------------------------- */
+/* Media queries for responsiveness */
+/* For devices less than 1024px wide */
+@media (max-width: 1024px) {
+  .projects-container {
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center;
+  }
+  .project-card {
+    width: 80%; /* Make cards take up more width on smaller screens */
+  }
+}
+
+/* For devices less than 768px wide */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%; /* Full width for very small screens */
+  }
+}
+
+/* For devices less than 480px wide */
+@media (max-width: 480px) {
+  .projects-section h2 {
+    font-size: 28px; /* Reduce title size */
+  }
+  .project-card {
+    padding: 15px; /* Reduce padding */
+    box-shadow: none; /* Remove box-shadow on mobile */
+  }
+  .project-details h3 {
+    font-size: 16px; /* Reduce text size */
+  }
+  .project-details p {
+    font-size: 12px; /* Reduce text size */
+  }
+  .project-link {
+    padding: 8px 10px; /* Smaller buttons */
+  }
+  .project-images img {
+    width: 80px; /* Smaller image size */
+  }
 }

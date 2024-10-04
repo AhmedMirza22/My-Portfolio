@@ -1,3 +1,4 @@
+/* Base contact section styling */
 .contact-section {
   padding: 50px;
   background-color: #f8f5ff;
@@ -9,11 +10,10 @@
 
 .contact-section h2 {
   font-family: 'Poppins', sans-serif; /* Ensure Poppins is applied */
-  justify-content:center;
+  justify-content: center;
   align-self: center;
   font-size: 36px;
   color: #6b47dc;
-
   font-weight: 700; /* Bold */
   margin-bottom: 30px;
 }
@@ -56,4 +56,38 @@
   font-size: 16px;
   color: #333; /* Darker gray for body text */
   margin: 0;
+}
+
+/* Responsive styles for mobile */
+@media only screen and (max-width: 768px) {
+  .contact-section {
+    padding: 30px 20px; /* Reduce padding for mobile */
+    align-items: center; /* Center-align content */
+  }
+
+  .contact-section h2 {
+    font-size: 28px; /* Slightly reduce heading size on mobile */
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    flex-direction: column; /* Stack contact items vertically on mobile */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contact-item h4 {
+    font-size: 16px; /* Reduce font size for mobile */
+  }
+
+  .contact-item p {
+    font-size: 14px; /* Reduce font size for mobile */
+  }
+
+  .icon-wrapper {
+    padding: 10px; /* Smaller padding for icons */
+  }
+
+  .contact-details {
+    gap: 20px; /* Reduce the gap between contact items */
+  }
 }

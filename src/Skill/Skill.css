@@ -1,3 +1,4 @@
+/* Skill Section Base Styles */
 .skills-section {
   padding: 100px 20px;
   text-align: center;
@@ -5,33 +6,22 @@
   background: linear-gradient(135deg, #e5e5fa, #faf5ff);
 }
 
-.skills-section h2 {
-  font-size: 36px;
-  color: #6b47dc;
-}
-
-.skills-section p {
-  margin: 10px 0 40px;
-  font-size: 18px;
-  color: #555;
-}
-
 .skills-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Default skill card styles */
+/* Skill Cards */
 .skill-card {
   background-color: #f8f5ff;
   border-radius: 12px;
   padding: 20px;
-  width: 180px;
+  width: 180px; /* Default width for desktop */
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card h3 {
@@ -40,66 +30,50 @@
   color: #6b47dc;
 }
 
-/* Initially set the icons to black */
 .skill-card .icon {
-  color: black;
-  transition: color 0.4s ease; /* Smooth color transition */
-}
-
-.skill-level {
-  font-size: 24px;
-  font-weight: bold;
-  color: #666;
+  font-size: 40px;
+  color: #6b47dc;
 }
 
 /* Hover effect for skill cards */
 .skill-card:hover {
-  background: linear-gradient(to right, #8268d8, #331455); /* Gradient background */
-  color: white; /* Change text color to white */
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
-}
-
-/* Change h3 (skill name) to white on hover */
-.skill-card:hover h3 {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #8268d8, #331455);
   color: white;
 }
 
-/* Change skill-level (percentage text) to white on hover */
-.skill-card:hover .skill-level {
+.skill-card:hover h3, .skill-card:hover .icon {
   color: white;
 }
 
-/* Change icon color to its original color on hover */
-.skill-card:hover .react-icon {
-  color: #61dafb; /* React's blue */
+/* Media Queries for Responsiveness */
+
+/* For tablet and smaller (max-width 768px) */
+@media only screen and (max-width: 768px) {
+  .skills-container {
+    justify-content: center;
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  .skill-card {
+    width: 45%; /* Each card takes 45% of the width for 2 cards in a row */
+    padding: 15px; /* Reduce padding */
+  }
 }
 
-.skill-card:hover .js-icon {
-  color: #f0db4f; /* JavaScript yellow */
-}
+/* For smaller mobile devices (max-width 480px) */
+@media only screen and (max-width: 480px) {
+  .skill-card {
+    width: 48%; /* Slightly wider for small mobile screens */
+    padding: 10px; /* Further reduce padding */
+  }
 
-.skill-card:hover .ts-icon {
-  color: #3178c6; /* TypeScript blue */
-}
+  .skill-card h3 {
+    font-size: 16px; /* Reduce text size */
+  }
 
-.skill-card:hover .node-icon {
-  color: #3c873a; /* Node.js green */
-}
-
-.skill-card:hover .wp-icon {
-  color: #21759b; /* WordPress blue */
-}
-
-/* NEW: Firebase, GitHub, GitLab Icons */
-.skill-card:hover .firebase-icon {
-  color: #FFCA28; /* Firebase yellow */
-}
-
-.skill-card:hover .github-icon {
-  color: #333; /* GitHub's black */
-}
-
-.skill-card:hover .gitlab-icon {
-  color: #FCA121; /* GitLab's orange */
+  .skill-card .icon {
+    font-size: 35px; /* Reduce icon size */
+  }
 }

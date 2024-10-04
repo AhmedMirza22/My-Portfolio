@@ -79,7 +79,6 @@ p {
   font-size: 16px;
   color: #6b47dc;
   font-weight: bold;
-
 }
 
 ul {
@@ -91,4 +90,56 @@ ul {
 
 li {
   color: #555; /* Default bullet point color */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+  .experience-education {
+    flex-direction: column; /* Stack the experience and education sections vertically */
+    gap: 30px; /* Adjust gap */
+  }
+
+  .experience, .education {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .about-section {
+    padding: 50px 20px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 24px; /* Reduce heading size */
+  }
+
+  h3 {
+    font-size: 16px; /* Reduce title size */
+  }
+
+  p, li {
+    font-size: 14px; /* Reduce paragraph and bullet point text size */
+  }
+
+  .experience, .education {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about-section {
+    padding: 30px 15px; /* Further reduce padding for small mobile screens */
+  }
+
+  h2 {
+    font-size: 22px; /* Further reduce heading size */
+  }
+
+  h3 {
+    font-size: 14px; /* Reduce title size */
+  }
+
+  p, li {
+    font-size: 12px; /* Further reduce text size */
+  }
 }

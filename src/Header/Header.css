@@ -1,114 +1,104 @@
-/* Header styles */
+/* Base header styles */
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #6b47dc, #331455); /* Gradient background */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #6b47dc, #331455);
   z-index: 1000;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Smooth transition */
 }
 
-.header.scrolled {
-  background: rgba(107, 71, 220, 0.9); /* Slightly transparent on scroll */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
   align-items: center;
+  padding: 20px 50px;
 }
 
 .logo {
   font-size: 26px;
   font-weight: bold;
-  color: white; /* Changed color to match gradient */
-  letter-spacing: 1px;
-  transition: transform 0.4s ease-in-out; /* Smooth animation */
+  color: white;
 }
 
-.logo:hover {
-  transform: rotate(-5deg) scale(1.1); /* Rotate and scale effect on hover */
-}
-
-/* Nav Links */
 .nav-links {
-  list-style-type: none;
   display: flex;
-  align-items: center;
-}
-
-.nav-links li {
-  margin-left: 20px;
+  list-style: none;
+  gap: 20px;
 }
 
 .nav-links a {
+  color: white;
   text-decoration: none;
-  color: white; /* Change to white for better contrast */
   font-size: 16px;
-  position: relative;
-  padding-bottom: 5px;
-  transition: color 0.3s ease-in-out;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-  color: #ffcc00; /* Change color on hover */
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* Hire Button */
 .hire-btn {
   padding: 10px 20px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient button */
+  background-color: #ff7e5f;
   color: white;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.4s ease, transform 0.4s ease; /* Smooth transition */
 }
 
-.hire-btn:hover {
-  background: linear-gradient(to right, #feb47b, #ff7e5f);
-  transform: translateY(-3px); /* Slight lift on hover */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+.hire-btn a {
+  text-decoration: none;
+  color: white;
 }
 
-/* Smooth scroll effect for entire page */
-html {
-  scroll-behavior: smooth;
+/* Hide Hamburger menu by default */
+.hamburger {
+  display: none;
 }
 
-/* Animation when the header scrolls */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
+/* Responsive styles for mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* Add animation on page load */
-.header {
-  animation: fadeInDown 1s ease-in-out;
+  /* Hide the regular menu */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(to right, #6b47dc, #331455); /* Gradient background */
+    position: absolute;
+    top: 60px; /* Below the header */
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 18px;
+  }
+
+  /* Hamburger menu visible */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .hire-btn {
+    display: none; /* Hide Hire Me button on mobile */
+  }
 }

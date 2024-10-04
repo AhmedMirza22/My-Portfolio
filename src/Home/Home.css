@@ -1,3 +1,4 @@
+/* Hero Section Base Styles */
 .hero-section {
   display: flex;
   align-items: center;
@@ -64,4 +65,41 @@
 .hero-image img:hover {
   transform: scale(1.1);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles for Mobile */
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding */
+    height: auto; /* Allow height to adjust to content */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Use full width */
+    margin-bottom: 30px; /* Add spacing between content and image */
+  }
+
+  .hero-content h1 {
+    font-size: 36px; /* Reduce heading size */
+  }
+
+  .hero-content h2 {
+    font-size: 24px; /* Reduce subheading size */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Reduce paragraph size */
+  }
+
+  .download-btn {
+    padding: 12px 24px; /* Adjust button size */
+    font-size: 16px; /* Adjust button text size */
+  }
+
+  .hero-image img {
+    width: 250px; /* Reduce image size */
+    height: 250px;
+  }
 }
