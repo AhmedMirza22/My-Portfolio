@@ -1,0 +1,62 @@
+.contact-section {
+  padding: 50px;
+  background-color: #f8f5ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-section h2 {
+  font-family: 'Poppins', sans-serif; /* Ensure Poppins is applied */
+  justify-content:center;
+  align-self: center;
+  font-size: 36px;
+  background: linear-gradient(to right, #8268d8, #331455); /* Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-weight: 700; /* Bold */
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-wrapper {
+  background: linear-gradient(to right, #8268d8, #331455); /* Gradient */
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: white; /* White icon color */
+}
+
+.contact-item h4 {
+  font-family: 'Poppins', sans-serif; /* Ensure correct font */
+  font-size: 18px;
+  margin: 0;
+  color: #6b47dc; /* Consistent color for titles */
+  font-weight: 600; /* Medium weight for h4 */
+}
+
+.contact-item p {
+  font-family: 'Poppins', sans-serif; /* Ensure correct font */
+  font-size: 16px;
+  color: #333; /* Darker gray for body text */
+  margin: 0;
+}

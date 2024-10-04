@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  padding: 100px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 36px;
+  /* color:linear-gradient(to right, #6b47dc, #b572ff); */
+  background: linear-gradient(to right, #8268d8, #331455); /* Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+p {
+  font-size: 18px;
+  color: #6b47dc;
+}
+
+/* Gradient color for buttons */
+.download-btn, .hire-btn {
+  background: linear-gradient(to right, #8268d8, #331455);;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
   color: white;
+  font-size: 18px;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-btn:hover, .hire-btn:hover {
+  background:linear-gradient(to left, #8268d8, #331455);;
 }

@@ -1,0 +1,23 @@
+.portfolio-section {
+    padding: 100px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .portfolio-section h2 {
+    font-size: 36px;
+    justify-content: center;
+    background: linear-gradient(to right, #8268d8, #331455); /* Gradient */
+    -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  

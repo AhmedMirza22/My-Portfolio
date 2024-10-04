@@ -1,0 +1,94 @@
+.about-section {
+  padding: 100px 20px;
+  background-color: #f3ebfe;
+  background: linear-gradient(135deg, #e5e5fa, #faf5ff);
+}
+
+.experience-education {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+.experience, .education {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3, p {
+  transition: color 0.4s ease;
+}
+
+/* Hover effect applied to individual experience or education cards */
+.experience-card:hover, .education-card:hover {
+  background: linear-gradient(to right, #8268d8, #331455); /* Gradient background on hover */
+  color: white; /* Text color turns white on hover */
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+}
+
+/* Ensure text inside the hovered cards turns white */
+.experience-card:hover h3, .education-card:hover h3 {
+  color: white; /* Change title text to white */
+}
+
+.experience-card:hover p, .education-card:hover p {
+  color: white; /* Change paragraph text to white */
+}
+
+/* Ensure the bullet points (list items) inside the cards turn white */
+.experience-card:hover ul, .education-card:hover ul {
+  color: white;
+}
+
+.experience-card:hover li, .education-card:hover li {
+  color: white; /* Change the bullet point text to white */
+}
+
+h2 {
+  font-size: 28px;
+  color: #6b47dc;
+  margin-bottom: 20px;
+}
+
+h2 i {
+  margin-right: 10px;
+}
+
+.experience-card, .education-card {
+  background-color: #f8f5ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #331455;
+}
+
+p {
+  font-size: 16px;
+  color: #6b47dc;
+  font-weight: bold;
+
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+li {
+  color: #555; /* Default bullet point color */
+}
